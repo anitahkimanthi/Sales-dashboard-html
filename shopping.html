@@ -9,10 +9,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 		<link rel="stylesheet" href="css/main.css">
-
 		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-		<script src="https://code.highcharts.com/highcharts.js"></script>
-		<script src="https://code.highcharts.com/modules/data.js"></script>
 		<script src="js/main.js"></script>
 
 	</head>
@@ -25,10 +22,10 @@
 			<a href="#" class="nav-trigger"><span></span></a>
 			<div class="account">
 					<i class=" message fa fa-bell"></i>
-					
 				</div>
 			
 		</div>
+
 		<div class="side-nav">
 			<div class="logo">
 				<i class="fa fa-shopping-cart"></i>
@@ -36,7 +33,6 @@
 			</div>
 			<nav>
 				<ul>
-						
 						<li>
 								<a href="#">
 									<span><i class="fa fa-home"></i></span>
@@ -45,6 +41,7 @@
 							</li>
 					<li>
 						<a href="#">
+
 							<span><i class="fa fa-envelope"></i></span>
 							<span>Messages</span>
 						</a>
@@ -67,20 +64,21 @@
 								<span>Shopping</span>
 							</a>
 						</li>
+						
 						<li>
-							<a href="#">
-								<span><i class="fa fa-users"></i></span>
-								<span>Users</span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span class="profile" >
-									<i  class=" profile-icon fa fa-user" ></i></span>
-								<span>Profile</span>
-							</a>
+								<a href="users.html">
+									<span><i class="fa fa-users"></i></span>
+									<span>Users</span>
+								</a>
 							</li>
 							
+							<li>
+								<a href="#">
+									<span class="profile" >
+										<i  class=" profile-icon fa fa-user" ></i></span>
+									<span>Profile</span>
+								</a>
+							</li>
 							
 					
 				</ul>
@@ -96,34 +94,52 @@
 						<input type="search" placeholder="Search.." name="search2">
 						<button type="submit"><i class="fa fa-search"></i></button>
 					  </form>
+				</div> 
 			</div>
 			<br clear="all"/>
 			
 			<div class="main">
-				<div class="widget">
-					<div class="title">online</div>
-					<div class="chart">
-						<span><i class="fa fa-comments"></i></span>
+					<div class="widget">
+						<div class="title">Rating</div>
+						<br clear="all"/>
+						<br clear="all"/>
+						<div class="chart">
+							<span><i class="fa fa-star"></i></span>
+							<span><i class="fa fa-star"></i></span>
+							<span><i class="fa fa-star"></i></span>
+							<span><i class="fa fa-star"></i></span>
+							<span><i class="fa fa-star-half-full"></i></span>
+						</div>
 					</div>
+					<div class="widget">
+						<div class="title">likes</div>
+						<br clear="all"/>
+						<br clear="all"/>
+						<div class="chart">
+							<span><i class="fa fa-thumbs-o-up"></i></span>
+							<br/>
+							366,534
+						</div>
+					</div>
+					<div class="widget">
+						<div class="title">comments</div>
+						<br clear="all"/>
+						<br clear="all"/>
+						<div class="chart">
+							<span><i class="fa fa-comments"></i></span>
+							<br/>
+							2,398,810
+						</div>
+					</div>
+	
+					<div class="linechart">
+							<div class="title">One year reform analyses</div>
+							<div class="barchart">
+								<br/>
+								<canvas id="bar-chart" style="margin:0 auto" width="800" height="450"></canvas>
+							</div>
+						</div>
 				</div>
-				<div class="widget">
-					<div class="title">In the shop</div>
-					<div class="chart">
-						<span><i class="fa fa-thumbs-o-up"></i></span>
-					</div>
-				</div>
-				<div class="widget">
-					<div class="title"></div>
-					<div class="chart">
-						<span><i class="fa fa-comments"></i></span>
-					</div>
-				</div>
-
-				<div class="linechart">
-						<div class="title">Number of comments</div>
-						<div class="chart"></div>
-					</div>
-			</div>
 			
 		</div>
 		<footer>
@@ -137,5 +153,32 @@
 					</ul>
 				</div>
 			</footer>
+			
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+			<script>
+			// Bar chart
+			new Chart(document.getElementById("bar-chart"), {
+				type: 'bar',
+				data: {
+				labels: ["jan", "Feb", "April", "May", "June","may","june","july","August","September","october","November,December"],
+				datasets: [
+					{
+					label: "sales",
+					backgroundColor: ["#26dddd","#26dddd","#26dddd","#26dddd","#26dddd","#26dddd","#26dddd","#26dddd","#26dddd","#26dddd","#26dddd","#26dddd",],
+					data: [2478,5267,734,784,433,3645, 2146,4296,1487,454,971,7613]
+					}
+				]
+				},
+				options: {
+				legend: { display: false},
+				title: {
+					display: true,
+				}
+				}
+			});
+
+
+			</script>
+			
 	</body>
 </html>

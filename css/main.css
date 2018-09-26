@@ -156,8 +156,7 @@ nav{
 }
 .search{
 	float:right;
-	width: 40%;
-	margin-top: -16px;
+	margin-top: -18px;
 }
 
 .footer{
@@ -167,7 +166,7 @@ nav{
 
 }
 .footer span{
-	margin-right: 10px;
+
 	font-size: 25px;
 }
 .footer ul li {
@@ -187,14 +186,14 @@ footer{
 	padding: 5px;
 }
 .search input{
-	width: 80%;
+	width: 85%;
 	padding: 5px;
 	float:right;
 	
 }
 .analytics{
 	float: left;
-	margin-top: -16px;
+	margin-top: -10px;
 }
 .chart{
 	max-width: 200px;
@@ -206,11 +205,16 @@ footer{
 
 /* set element styles to fit tablet and higher(desktop) */
 
-@media screen and (max-width:600px){
+@media screen and (max-width:768px){
 	.search{
 		float:right;
-		width: 75%;
+		width: 60%;
 		margin-top: -16px;
+	}
+}
+@media screen and (min-width: 992px){
+	.search{
+		width: 40%;
 	}
 }
 
@@ -282,6 +286,13 @@ footer{
 		margin-left: 270px;
 	}
 }
+canvas{
+	width: 100% !important;
+    max-width: 800px;
+	height: auto !important;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
 
 /* main box container */
 .main {
@@ -298,12 +309,13 @@ footer{
 	position: relative;
 }
 .widget .title {
-	background-color: #eef1f7;
+	background-color: #084444;
 	border-bottom: 1px solid #dfe4ec;
 	padding: 10px;
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
 	font-weight: 600;
+	color:#fff;
 	text-align: center;
 }
 .fa-star{
@@ -329,9 +341,10 @@ footer{
 	position: relative;
 }
 .linechart .title {
-	background-color: #eef1f7;
+	background-color: #084444;
 	border-bottom: 1px solid #dfe4ec;
 	padding: 10px;
+	color:#fff;
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
 	font-weight: 600;
@@ -345,7 +358,7 @@ form.example input[type=search] {
     font-size: 17px;
     border: 1px solid grey;
     float: left;
-    width: 70%;
+    width: 85%;
     background: #f1f1f1;
 }
 

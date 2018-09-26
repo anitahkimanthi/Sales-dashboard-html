@@ -68,7 +68,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="users.html">
 								<span><i class="fa fa-users"></i></span>
 								<span>Users</span>
 							</a>
@@ -132,7 +132,10 @@
 
 				<div class="linechart">
 						<div class="title">One year reform analyses</div>
-						<div class="chart"></div>
+						<div class="barchart">
+							<br/>
+							<canvas id="line-chart" style="margin:0 auto" width="800" height="450"></canvas>
+						</div>
 					</div>
 			</div>
 			
@@ -148,5 +151,33 @@
 					</ul>
 				</div>
 			</footer>
+
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+			<script>
+			// Bar chart
+			new Chart(document.getElementById("line-chart"), {
+				type: 'line',
+				data: {
+				labels: ["jan", "Feb", "April", "May", "June","may","june","july","August","September","october","November,December"],
+				datasets: [
+					{
+					label: "sales",
+					borderColor: "#3e95cd",
+        			fill: false,
+					data: [2478,5267,734,784,433,3645, 2146,4296,1487,454,971,7613]
+					}
+				]
+				},
+				options: {
+				legend: { display: false},
+				title: {
+					display: true,
+					font:30
+				}
+				}
+			});
+
+
+			</script>
 	</body>
 </html>

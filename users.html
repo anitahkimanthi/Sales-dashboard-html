@@ -66,7 +66,7 @@
 						</li>
 						
 						<li>
-								<a href="users.html">
+								<a href="#">
 									<span><i class="fa fa-users"></i></span>
 									<span>Users</span>
 								</a>
@@ -146,10 +146,10 @@
 				<!-- <br clear="all"/> -->
 				<div class="footer">
 					<ul>
-						<li><span><i class="fa fa-facebook"></i></span>anitakimanzi</li>
-						<li><span><i class="fa fa-twitter"></i></span>@anitakimanzi</li>
-						<li><span><i class="fa fa-github"></i></span>anitahkimanzi</li>
-						<li><span><i class="fa fa-linkedin"></i></span>anita kimanzi</li>
+						<li><span><i class="fa fa-facebook"></i></span></li>
+						<li><span><i class="fa fa-twitter"></i></span></li>
+						<li><span><i class="fa fa-github"></i></span></li>
+						<li><span><i class="fa fa-linkedin"></i></span></li>
 					</ul>
 				</div>
 			</footer>
@@ -173,7 +173,27 @@
 				legend: { display: false},
 				title: {
 					display: true,
-					
+					text: 'digital sales'
+				}
+				}
+			});
+
+            new Chart(document.getElementById("bar-chart"), {
+				type: 'bar',
+				data: {
+				labels: ["jan", "Feb", "April", "May", "June","may","june","july","August","September","october","November,December"],
+				datasets: [
+					{
+					label: "sales",
+					backgroundColor: ["#26dddd","#26dddd","#26dddd","#26dddd","#26dddd","#26dddd","#26dddd","#26dddd","#26dddd","#26dddd","#26dddd","#26dddd",],
+					data: [2478,5267,734,784,433,3645, 2146,4296,1487,454,971,7613]
+					}
+				]
+				},
+				options: {
+				legend: { display: false},
+				title: {
+					display: true,
 				}
 				}
 			});
